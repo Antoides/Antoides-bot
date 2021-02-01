@@ -21,6 +21,8 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
+	var whiled = new Date();
+	while (whiled == 34) {
 	var data = new Date();
 		var ora = data.getHours();
 	switch (ora) {
@@ -41,7 +43,7 @@ default:
 		type: 'WATCHING'
 	});
 }
-
+	}
 }); 
  
 client.login(process.env.TOKEN)
