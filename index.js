@@ -35,9 +35,13 @@ case 20:
       type: 'PLAYING'
     });
 case 14:
-    client.user.setActivity('Sta girando un film');
+    client.user.setActivity('GTA VII', {
+		type: 'PLAYING'
+	});
 case 8:
-    client.user.setActivity('Sta facendo videolezione');
+    client.user.setActivity('la videolezione', {
+		type: 'WATCHING'
+	});
 default:
     client.user.setActivity('Brazzers', {
 		type: 'WATCHING'
