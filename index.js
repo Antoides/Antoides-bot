@@ -21,9 +21,23 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
-    client.user.setActivity('Cyberpunk 2188', {
+	var ora = data.getHours();
+if (ora == "2") {
+    client.user.setActivity('Pornhub', {
+      type: 'WATCHING'
+    });
+}
+if (ora == "20") {
+    client.user.setActivity('Summertime saga', {
       type: 'PLAYING'
     });
+}
+if (ora == "14") {
+    client.user.setActivity('Sta girando un film');
+}
+if (ora == "8") {
+    client.user.setActivity('Sta facendo videolezione');
+}
 }); 
  
 client.login(process.env.TOKEN)
