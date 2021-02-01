@@ -21,8 +21,8 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
-    client.user.setActivity('PornHub', {
-      type: 'WATCHING'
+    client.user.setActivity('Cyberpunk 2188', {
+      type: 'PLAYING'
     });
 }); 
  
