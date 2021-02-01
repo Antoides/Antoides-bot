@@ -21,6 +21,7 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
+	var data = new Date();
 	var ora = data.getHours();
 	switch (ora) {
 case 2:
