@@ -22,22 +22,25 @@ config({
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
 	var ora = data.getHours();
-if (ora >= 2) {
+	switch (ora) {
+case 2:
     client.user.setActivity('Pornhub', {
       type: 'WATCHING'
     });
-}
-if (ora >= 20) {
+case 20:
     client.user.setActivity('Summertime saga', {
       type: 'PLAYING'
     });
-}
-if (ora >= 14) {
+case 14:
     client.user.setActivity('Sta girando un film');
-}
-if (ora >= 8) {
+case 8:
     client.user.setActivity('Sta facendo videolezione');
+default:
+    client.user.setActivity('Brazzers', {
+		type: 'WATCHING'
+	});
 }
+
 }); 
  
 client.login(process.env.TOKEN)
