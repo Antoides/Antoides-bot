@@ -1,0 +1,22 @@
+{
+  "name": "bot-discord",
+  "version": "1.0.0",
+  "description": "Antoides's Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "()ciao"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ciao"
+  },
+  "author": "Antoides",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
+    "random-puppy": "^1.1.0"
+  }
+}
