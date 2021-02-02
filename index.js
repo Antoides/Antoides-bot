@@ -30,22 +30,27 @@ case 2:
     client.user.setActivity('Pornhub', {
       type: 'WATCHING'
     });
+break;
 case 20:
     client.user.setActivity('Summertime saga', {
       type: 'PLAYING'
     });
+break;
 case 14:
     client.user.setActivity('GTA VII', {
 		type: 'PLAYING'
 	});
+break;
 case 8:
     client.user.setActivity('la videolezione', {
 		type: 'WATCHING'
 	});
+break;
 default:
     client.user.setActivity('Brazzers', {
 		type: 'WATCHING'
 	});
+break;
 }
 	}
 }); 
