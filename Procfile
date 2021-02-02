@@ -1,1 +1,1 @@
-Start: bash ./start.sh
+Start: bash bot_anto/start.sh
