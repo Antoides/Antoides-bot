@@ -60,7 +60,7 @@ client.on("message", async message => {
 });
 
 client.on('guildMemberAdd', member => {
- const channel = member.guild.channels.cache.find(ch => ch.name === '#generale');
+ const channel = member.guild.channels.cache.find(ch => ch.name === '𝒢ℯ𝓃ℯ𝓇𝒶𝓁ℯ');
  if (!channel) return;
  channel.send(`$(member), **Benvenuto nel server di Antoides!**`);
 });
