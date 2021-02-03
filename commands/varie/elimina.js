@@ -9,11 +9,11 @@ module.exports = {
       }
  
       if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-          return message.reply("Maooooooo non hai il permesso **XD**")
+          return message.reply("**Non sei un Dittatore non puoi eliminare i messaggi altrui**")
       }
  
       if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-        return message.reply("Devi mettere un numero di messaggi")
+        return message.reply("**Devi mettere un numero di messaggi**")
       }
  
       let deleteAmount;
