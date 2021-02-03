@@ -22,7 +22,7 @@ config({
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
     client.user.setActivity('Brazzers', {
-		type: 'PLAYING'
+		type: 'WATCHING'
 	});
 });
  
