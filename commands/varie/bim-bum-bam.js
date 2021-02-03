@@ -2,7 +2,7 @@ const Embed = require("embedcord");
 const Discord = require("discord.js");
 const { promptMessage } = require("../../functions.js");
  
-const chooseArr = [":hand_splayed:", ":v:", ":punch:"];
+const chooseArr = ["🖐", "✌", "👊"];
  
 module.exports = {
     name: "minigame",
@@ -29,9 +29,9 @@ module.exports = {
       m.edit(embed);
  
       function getResult(me, clientChosen) {
-         if ((me === ":hand_splayed:" && clientChosen === ":punch:") ||
-            (me === ":punch:" && clientChosen === ":v:") ||
-            (me === ":v:" && clientChosen === ":hand_splayed:")) {
+         if ((me === "🖐" && clientChosen === "👊") ||
+            (me === "👊" && clientChosen === "✌") ||
+            (me === "✌" && clientChosen === "🖐")) {
                 return "**Hai vinto** ora me lo puoi appoggiare!";
          } else if (me === clientChosen) {
              return "Pareggio";
