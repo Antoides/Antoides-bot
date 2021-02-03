@@ -9,7 +9,7 @@ module.exports = {
       }
  
       if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-          return message.reply("**Non sei un Dittatore non puoi eliminare i messaggi altrui**")
+          return message.reply("**Non sei un Dittatore non puoi eliminare i messaggi altrui!!!**")
       }
  
       if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
@@ -29,7 +29,7 @@ module.exports = {
  
       message.channel.bulkDelete(deleteAmount, true)
           .catch(err => message.reply("**ERRORE**"))
-          .then(deleted => message.channel.send("Messaggi eliminati **con successo**."))
+          .then(deleted => message.channel.send("Ho eliminato i messaggi di sto coglione."))
           .then(deleteAmountNumber = deleteAmount);
  
     }
