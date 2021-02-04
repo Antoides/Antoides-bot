@@ -15,10 +15,11 @@ module.exports = {
 			let pull = require(`/app/commands/${dir}/${file}`);
 			var cmd = pull.name[0];
 			var desc = pull.description;
-			var msgs = msgs + "%" + cmd + ": " + desc + "\n";
+			var newaa = "%" + cmd + ": " + desc + "\n";
+			var msgs = msgs + newaa;
+			console.log(newaa);
 		}
       });
-      console.log(msgs);
       return message.reply(msgs)
     }
 };
