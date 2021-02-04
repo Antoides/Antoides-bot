@@ -18,6 +18,7 @@ module.exports = {
 			var msgs = msgs + "%" + cmd + ": " + desc + "\n";
 		}
       });
+      console.log(msgs);
       return message.reply(msgs)
     }
 };
