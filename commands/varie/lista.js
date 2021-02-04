@@ -6,7 +6,7 @@ module.exports = {
     run: async (client, message, args) => {
      
       if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-        return message.reply("**Lista comandi: %meme(manda un meme), %clear(elimina i messaggi), %list(lista dei comandi)**")
+        return message.reply("**Lista comandi: %meme (manda un meme), %clear (elimina i messaggi), %list (lista dei comandi), %minigame (carta forbice sasso)**")
       }
     }
 };
