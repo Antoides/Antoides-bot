@@ -8,14 +8,14 @@ module.exports = {
     category: "messaggi",
     description: "Mostra la lista dei comandi",
     run: async (client, message, args) => {
-	  var msgs = "I comandi del bot sono:\n";
+	  var msgs = "I comandi del bot sono:";
       readdirSync("/app/commands/").forEach(dir => {
         const commands = readdirSync(`/app/commands/${dir}/`).filter(file => file.endsWith(".js"));
 		for (let file of commands) {
 			let pull = require(`/app/commands/${dir}/${file}`);
 			var cmd = pull.name;
 			var desc = pull.description;
-			var newaa = "%" + cmd + ": " + desc + "\n";
+			var newaa = "%" + cmd + ": " + desc;
 			var msgs = msgs + newaa;
 			console.log(newaa);
 		}
