@@ -1,6 +1,6 @@
 module.exports = {
     name: "lista",
-    aliases: ["list"],
+    aliases: ["lista"],
     category: "messaggi",
     description: "Mostra la lista dei comandi",
     run: async (client, message, args) => {
