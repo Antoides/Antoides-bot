@@ -6,6 +6,7 @@ const chooseArr = ["🅿"];
  
 module.exports = {
     name: "F",
+    aliases: ["f"],
     description: "Press F to pay respect",
     usage: "F",
     run: async (client, message, args) => {

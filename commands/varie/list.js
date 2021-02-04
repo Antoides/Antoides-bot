@@ -15,7 +15,7 @@ module.exports = {
 			let pull = require(`./commands/${dir}/${file}`);
 			var cmd = pull.aliases[0];
 			var desc = pull.description;
-			var msgs = cmd + ": " + desc + "\n";
+			var msgs = "%" + cmd + ": " + desc + "\n";
 		}
       });
       return message.reply(msgs)
