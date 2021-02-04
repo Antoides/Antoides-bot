@@ -8,7 +8,7 @@ module.exports = {
     category: "messaggi",
     description: "Mostra la lista dei comandi",
     run: async (client, message, args) => {
-	
+	  console.log(process.cwd());
 	  var msgs = "I comandi del bot sono:\n";
       readdirSync("/app/commands/").forEach(dir => {
         const commands = readdirSync(`/app/commands/varie/${dir}/`).filter(file => file.endsWith(".js"));
