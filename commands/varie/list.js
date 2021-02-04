@@ -13,7 +13,7 @@ module.exports = {
         const commands = readdirSync(`/app/commands/${dir}/`).filter(file => file.endsWith(".js"));
 		for (let file of commands) {
 			let pull = require(`/app/commands/${dir}/${file}`);
-			console.log(pull.aliases);
+			console.log(pull.name);
 			var cmd = pull.aliases[0];
 			var desc = pull.description;
 			var msgs = "%" + cmd + ": " + desc + "\n";
