@@ -2,7 +2,7 @@ const Embed = require("embedcord");
 const Discord = require("discord.js");
 const { promptMessage } = require("../../functions.js");
  
-const chooseArr = ["[F]"];
+const chooseArr = ["🅿"];
  
 module.exports = {
     name: "F",
