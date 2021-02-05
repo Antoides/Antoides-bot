@@ -15,7 +15,7 @@ module.exports = {
 			let pull = require(`/app/commands/${dir}/${file}`);
 			var cmd = pull.name;
 			var desc = pull.description;
-			var newaa = "\t" + "%" + cmd + ": " + desc + "\n";
+			var newaa = "\t\t" + "%" + cmd + ": " + desc + "\n";
 			msgs = msgs + newaa;
 			console.log(newaa);
 		}
