@@ -16,7 +16,7 @@ module.exports = {
 			var cmd = pull.name;
 			var desc = pull.description;
 			var newaa = "%" + cmd + ": " + desc;
-			var msgs = msgs + newaa;
+			msgs = msgs + newaa;
 			console.log(newaa);
 		}
       });
