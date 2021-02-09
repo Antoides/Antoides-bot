@@ -6,7 +6,7 @@ module.exports = {
     name: "lista",
     aliases: ["list"],
     category: "messaggi",
-    description: "Mostra la lista dei comandi",
+    description: "Lista dei comandi",
     run: async (client, message, args) => {
 	  var msgs = "I comandi del bot sono: \n";
       readdirSync("/app/commands/").forEach(dir => {

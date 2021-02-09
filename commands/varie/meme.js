@@ -2,8 +2,8 @@ const Embed = require("embedcord");
 const randomPuppy = require("random-puppy");
  
 module.exports = {
-    name: "meme",
-    description: "Manda una memeeeeeeeeeeeeeeeeeee",
+    name: "Meme",
+    description: "Manda una meme",
     run: async (client, message, args) => {
  
        const subReddits = ["memes", "dankmemes", "lol"];
