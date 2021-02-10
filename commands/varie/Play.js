@@ -16,7 +16,7 @@ module.exports = {
     else {
         message.channel.send("Entra in una chat vocale, coglione"); //Messaggio se l'utente non è in nessun canale vocale
     }
-}
+
 }
 }
 }
