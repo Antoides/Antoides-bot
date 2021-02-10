@@ -13,6 +13,7 @@
   "author": "Antoides",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.4.0",
     "ascii-table": "^0.0.9",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
