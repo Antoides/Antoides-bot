@@ -10,7 +10,7 @@ module.exports = {
     if (voiceChannel) {
         voiceChannel.join()
             .then(connection => {
-                connection.play('Antoides-bot\WhatsApp Audio 2021-02-10 at 08.45.11.mpeg'); //Scrivere il nome del file audio nella cartella o il path
+                connection.play('loud indian music (lol mega earrape)(MP3_160K).mp3'); //Scrivere il nome del file audio nella cartella o il path
             });
     else {
         message.channel.send("Entra in una chat vocale, coglione"); //Messaggio se l'utente non è in nessun canale vocale
