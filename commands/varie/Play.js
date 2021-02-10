@@ -10,7 +10,7 @@ module.exports = {
     if (voiceChannel) {
         voiceChannel.join()
             .then(connection => {
-                connection.play('WhatsApp Audio 2021-02-10 at 08.45.11.mpeg'); //Scrivere il nome del file audio nella cartella o il path
+                connection.play('Antoides-bot/WhatsApp Audio 2021-02-10 at 08.45.11.mpeg'); //Scrivere il nome del file audio nella cartella o il path
             });
     }
     else {
