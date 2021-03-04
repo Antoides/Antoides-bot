@@ -9,7 +9,7 @@ module.exports = {
       }
  
       if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-          return message.reply("**Non sei un Dittatore non puoi eliminare i messaggi altrui!!!**")
+          return message.reply("**Non puoi eliminare i messaggi altrui!!!**")
       }
  
       if (isNaN(args[0]) || parseInt(args[0]) <= 0) {

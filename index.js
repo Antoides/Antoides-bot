@@ -21,8 +21,8 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
-    client.user.setActivity('%list', {
-		type: 'PLAYING'
+    client.user.setActivity('%stato', {
+		type: 'WATCHING'
 	});
 });
  
