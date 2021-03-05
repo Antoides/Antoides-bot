@@ -25,7 +25,7 @@ client.on("ready", () => {
 		type: 'WATCHING'
 	});
 });
- 
+
 client.login(process.env.TOKEN)
 client.on("message", message => {
     if(message.author.bot) return;
@@ -59,8 +59,17 @@ client.on("message", async message => {
         command.run(client, message, args);
 });
 
-client.on('guildMemberAdd', member => {
- const channel = member.guild.channels.cache.find(ch => ch.name === '𝒢ℯ𝓃ℯ𝓇𝒶𝓁ℯ');
- if (!channel) return;
- channel.send(`$(member), **Benvenuto nel server di Antoides!**`);
-});
+client.on("message", (message) => {
+	if (message.content == "%play") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('loud indian music (lol mega earrape)(MP3_160K).mp3'); //Scrivere il nome del file audio nella cartella o il path
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale"); //Messaggio se l'utente non è in nessun canale vocale
+    }
+}
+})

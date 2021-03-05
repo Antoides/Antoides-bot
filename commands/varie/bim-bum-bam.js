@@ -32,11 +32,11 @@ module.exports = {
          if ((me === "🖐" && clientChosen === "👊") ||
             (me === "👊" && clientChosen === "✌") ||
             (me === "✌" && clientChosen === "🖐")) {
-                return "**Hai vinto** ora me lo puoi appoggiare!";
+                return "**Hai vinto**";
          } else if (me === clientChosen) {
-             return "Pareggio";
+             return "**Pareggio**";
          } else {
-             return "Hai perso, ora te lo appoggio";
+             return "**Hai perso**";
          }
  
  
