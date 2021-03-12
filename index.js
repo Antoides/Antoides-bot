@@ -21,7 +21,7 @@ config({
  
 client.on("ready", () => {
     console.log(`I am now connected to discord with account: ${client.user.username}!`);
-    client.user.setActivity('%stato', {
+    client.user.setActivity('%list', {
 		type: 'WATCHING'
 	});
 });
@@ -65,11 +65,113 @@ client.on("message", (message) => {
     if (voiceChannel) {
         voiceChannel.join()
             .then(connection => {
-                connection.play('loud indian music (lol mega earrape)(MP3_160K).mp3'); //Scrivere il nome del file audio nella cartella o il path
+                connection.play('Autodistruzione.mp3'); //Scrivere il nome del file audio nella cartella o il path 
+ });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale"); //Messaggio se l'utente non è in nessun canale vocale
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%ciao") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('Giorgio.mp3'); //Scrivere il nome del file audio nella cartella o il path
             });
 	}
     else {
         message.channel.send("Devi entrare in una chat vocale"); //Messaggio se l'utente non è in nessun canale vocale
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%stop") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('Stacca.mp3');
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%dance") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('Dance.mp3'); //Scrivere il nome del file audio nella cartella o il path
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%disconnect") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.leave()
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%zucchina") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('zucchina.mp3'); //Scrivere il nome del file audio nella cartella o il path
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%coffin") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('coffin.mp3'); //Scrivere il nome del file audio nella cartella o il path
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
+    }
+}
+})
+
+client.on("message", (message) => {
+	if (message.content == "%2007") {
+    const voiceChannel = message.member.voice.channel;
+    if (voiceChannel) {
+        voiceChannel.join()
+            .then(connection => {
+                connection.play('xan.mp3'); //Scrivere il nome del file audio nella cartella o il path
+            });
+	}
+    else {
+        message.channel.send("Devi entrare in una chat vocale");
     }
 }
 })

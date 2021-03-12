@@ -9,6 +9,10 @@ module.exports = {
     description: "Carta forbice sasso",
     usage: "minigame",
     run: async (client, message, args) => {
+
+        deleteAmount = 1
+        message.channel.bulkDelete(deleteAmount, true)
+
       const embed = new Embed.DiscordEmbed()
           .setColor('#666666')
           .setFooter(message.guild.me.displayName, client.user.displayAvatarURL)
