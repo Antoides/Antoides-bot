@@ -60,22 +60,61 @@ client.on("message", async message => {
 });
 
 client.on("message", (message) => {
-	if (message.content == "%play") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('Autodistruzione.mp3'); //Scrivere il nome del file audio nella cartella o il path 
- });
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale"); //Messaggio se l'utente non è in nessun canale vocale
+    if (message.content.startsWith("%kick")) {
+        var utenteKick = message.mentions.members.first();
+
+        if (!message.member.hasPermission("KICK_MEMBERS")) {
+            message.channel.send('Non hai il permesso');
+            return;
+        }
+
+        if (!utenteKick) {
+            message.channel.send('Non hai menzionato nessun utente');
+            return;
+        }
+
+        if (!message.mentions.members.first().kickable) {
+            message.channel.send('Io non ho il permesso');
+            return
+        }
+
+        utenteKick.kick()
+            .then(() => message.channel.send("<@" + utenteKick + ">" + " mandato nel paraferno"))
+
     }
-}
+
+    if (message.content.startsWith("%ban")) {
+        var utenteBan = message.mentions.members.first();
+
+        if (!message.member.hasPermission("BAN_MEMBERS")) {
+            message.channel.send('Non hai il permesso');
+            return;
+        }
+
+        if (!utenteBan) {
+            message.channel.send('Non hai menzionato nessun utente');
+            return;
+        }
+
+        if (!utenteBan.kickable) {
+            message.channel.send('Io non ho il permesso');
+            return
+        }
+
+        utenteBan.ban()
+            .then(() => message.channel.send("<@" + utenteBan + ">" + " è stato mandato nel gulag"))
+
+    }
 })
 
+client.on ("message", (message) => {
+	if(message.content == "%privato"){
+	   message.author.send("Fammi nu bucchin");
+	}
+});
+
 client.on("message", (message) => {
-	if (message.content == "%ciao") {
+	if (message.content == "%giorgio") {
     const voiceChannel = message.member.voice.channel;
     if (voiceChannel) {
         voiceChannel.join()
@@ -90,85 +129,10 @@ client.on("message", (message) => {
 })
 
 client.on("message", (message) => {
-	if (message.content == "%stop") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('Stacca.mp3');
-            });
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale");
-    }
-}
-})
-
-client.on("message", (message) => {
-	if (message.content == "%dance") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('Dance.mp3'); //Scrivere il nome del file audio nella cartella o il path
-            });
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale");
-    }
-}
-})
-
-client.on("message", (message) => {
 	if (message.content == "%disconnect") {
     const voiceChannel = message.member.voice.channel;
     if (voiceChannel) {
         voiceChannel.leave()
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale");
-    }
-}
-})
-
-client.on("message", (message) => {
-	if (message.content == "%zucchina") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('zucchina.mp3'); //Scrivere il nome del file audio nella cartella o il path
-            });
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale");
-    }
-}
-})
-
-client.on("message", (message) => {
-	if (message.content == "%coffin") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('coffin.mp3'); //Scrivere il nome del file audio nella cartella o il path
-            });
-	}
-    else {
-        message.channel.send("Devi entrare in una chat vocale");
-    }
-}
-})
-
-client.on("message", (message) => {
-	if (message.content == "%2007") {
-    const voiceChannel = message.member.voice.channel;
-    if (voiceChannel) {
-        voiceChannel.join()
-            .then(connection => {
-                connection.play('xan.mp3'); //Scrivere il nome del file audio nella cartella o il path
-            });
 	}
     else {
         message.channel.send("Devi entrare in una chat vocale");
